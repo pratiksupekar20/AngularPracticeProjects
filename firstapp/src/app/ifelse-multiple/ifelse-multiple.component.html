@@ -1,0 +1,20 @@
+<!--<ng-template [ngIf]="colors=='red'">
+  <h4>belong to red</h4>
+</ng-template>
+
+<ng-template [ngIf]="colors=='white'">
+  <h4>belong to white</h4>
+</ng-template>
+
+<ng-template [ngIf]="colors=='blue'">
+  <h4>belong to blue</h4>
+</ng-template>
+-->
+
+<!--now switch case -->
+<div [ngSwitch]="colors">
+  <div *ngSwitchCase="'red'"><h3>it's red</h3></div>
+  <div *ngSwitchCase="'blue'"><h3>it's blue</h3></div>
+  <div *ngSwitchCase="'white'"><h3>it's white</h3></div>
+  <div *ngSwitchDefault><h3>it's default</h3></div>
+</div>

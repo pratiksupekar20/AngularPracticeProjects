@@ -1,0 +1,15 @@
+<p>employee-interface works!</p>
+<div *ngFor="let student of studentInfo">
+   <ol>
+    <li>{{student.rollNumber}}</li>
+    <li>{{student.name}}</li>
+    <li>{{student.age}}</li>
+    <ul *ngFor="let sub of student.subject">
+      <div *ngIf="sub.mark>=85">
+      <li>{{sub.subjectName}}</li>
+      <li>{{sub.mark}}</li>
+      </div>
+    </ul>
+   </ol>
+
+</div>

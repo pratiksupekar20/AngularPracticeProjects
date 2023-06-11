@@ -1,0 +1,76 @@
+<h1><div class="heading">Employee Information</div></h1>
+
+<div class="tables">
+
+<div class="mb-3">
+  <label for="userName" class="form-label"><b>User Name</b></label>
+  <input type="text" [(ngModel)]="userName" class="form-control" id="userName" placeholder="enter user name">
+</div>
+
+<div class="mb-3">
+  <label for="userEmail" class="form-label"><b>User Email</b></label>
+  <input type="text" [(ngModel)]="userEmail" class="form-control" id="userEmail" placeholder="enter user email">
+</div>
+
+<div class="mb-3">
+  <label for="userLocation" class="form-label"><b>User Location</b></label>
+  <input type="text" [(ngModel)]="userLocation" class="form-control" id="userLocation" placeholder="enter user location">
+</div>
+
+<div>
+  <div class="row align-items-center">
+    <div class="col">
+      <label for="userLocation" class="form-label"><b>Address line1</b></label>
+  <input type="text" [(ngModel)]="add1" class="form-control" id="userLocation" placeholder="enter user location">
+    </div>
+    <div class="col">
+      <label for="userLocation" class="form-label"><b>Address line2</b></label>
+      <input type="text" [(ngModel)]="add2" class="form-control" id="userLocation" placeholder="enter user location">
+    </div>
+    <div class="col">
+      <label for="userLocation" class="form-label" placeholder="enter user location"><b>pin</b></label>
+  <input type="text" [(ngModel)]="pin" class="form-control" id="userLocation" placeholder="enter user location">
+    </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label"><b>Message</b></label>
+      <textarea [(ngModel)]="message" class="form-control" id="exampleFormControlTextarea1" rows="3" ></textarea>
+    </div>
+  
+</div>
+
+
+<button type="button" (click)="saveForm()" class="btn btn-primary">submit form</button>
+
+
+</div>
+
+
+<table class="table">
+  <thead>
+ 
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">userName</th>
+      <th scope="col">userEmail</th>
+      <th scope="col">userLocation</th>
+      <th scope="col">Address</th>
+      <th scope="col">message</th>
+     
+    </tr>
+  
+  </thead>
+
+  <tbody class="table-group-divider">
+   <tr *ngFor="let itr of emp;index as id">
+    <td>{{id+1}}</td>
+    <td>{{itr.userName}}</td>
+    <td>{{itr.userEmail}}</td>
+    <td>{{itr.userLocation}}</td>
+    <td>{{itr.address.add1+", "+itr.address.add2+", "+itr.address.pin}}</td>
+    <td>{{itr.message}}</td>
+   </tr>
+    
+  </tbody>
+</table>

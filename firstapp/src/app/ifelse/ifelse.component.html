@@ -1,0 +1,5 @@
+
+<p *ngIf="second;then truePart else falsePart"></p>
+<ng-template #truePart><h3>true part</h3></ng-template>
+<ng-template #falsePart><h3>false part</h3></ng-template>
+<button (click)="templates()">here</button>
